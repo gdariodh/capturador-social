@@ -20,7 +20,7 @@
       <div class="card-body">
         <h1 class="card-title">Ficha Social</h1>
 
-        <button id="showForm" class="btn btn-outline-primary" >
+        <button id="showForm" class="btn btn-outline-primary">
           Crear una ficha social
         </button>
 
@@ -196,46 +196,32 @@
       </div>
     </div>
 
-    <button class="btn btn-primary" id="showTable">Mostrar registros</button>
+    <div class="container">
+      <button class="btn btn-primary" id="showTable">Mostrar registros</button>
 
-    <table id="table" class="table">
-      <thead>
-        <tr>
-          <th scope="col">Nombre</th>
-          <th scope="col">RUT</th>
-          <th scope="col">Comuna</th>
-          <th scope="col">Direccion</th>
-          <th scope="col">Telefono</th>
-          <th scope="col">Correo</th>
-          <th scope="col">Fecha de nacimiento</th>
-          <th scope="col">Edad</th>
-          <th scope="col">Estatura</th>
-          <th scope="col">Nivel Basica</th>
-          <th scope="col">Nivel Media</th>
-          <th scope="col">Trabajo</th>
-          <th scope="col">Exp laboral</th>
-          <th scope="col">Renta</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td id="tableName"></td>
-          <td id="tableRut"></td>
-          <td id="tableComuna"></td>
-          <td id="tableAddress"></td>
-          <td id="tablePhone"></td>
-          <td id="tableEmail"></td>
-          <td id="tableBirthday"></td>
-          <td id="tableAge"></td>
-          <td id="tableEstatura"></td>
-          <td id="tableBasica"></td>
-          <td id="tableMedia"></td>
-          <td id="tableJob"></td>
-          <td id="tableAgeJob"></td>
-          <td id="tableRenta"></td>
-        </tr>
-      </tbody>
-    </table>
+      <table id="table" class="table mt-4">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">RUT</th>
+            <th scope="col">Comuna</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Telefono</th>
+            <th scope="col">Correo</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Estatura</th>
+            <th scope="col">Nivel Basica</th>
+            <th scope="col">Nivel Media</th>
+            <th scope="col">Trabajo</th>
+            <th scope="col">Exp laboral</th>
+            <th scope="col">Renta</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
 
     <script src="./simulator.js"></script>
   </body>

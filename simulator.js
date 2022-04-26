@@ -1,22 +1,9 @@
 const form = document.querySelector("#formSimulator");
 const table = document.querySelector("#table");
+const tableBody = document.querySelector("#tableBody");
 let socialRecord = [];
 const showForm = document.querySelector("#showForm");
 const showTable = document.querySelector("#showTable");
-// const tableName = document.querySelector("#tableName");
-// const tableRut = document.querySelector("#tableRut");
-// const tableComuna = document.querySelector("#tableComuna");
-// const tableAddress = document.querySelector("#tableAddress");
-// const tablePhone = document.querySelector("#tablePhone");
-// const tableEmail = document.querySelector("#tableEmail");
-// const tableBirthday = document.querySelector("#tableBirthday");
-// const tableAge = document.querySelector("#tableAge");
-// const tableEstatura = document.querySelector("#tableEstatura");
-// const tableBasica = document.querySelector("#tableBasica");
-// const tableMedia = document.querySelector("#tableMedia");
-// const tableJob = document.querySelector("#tableJob");
-// const tableAgeJob = document.querySelector("#tableAgeJob");
-// const tableRenta = document.querySelector("#tableRenta");
 
 showForm.addEventListener("click", () => {
   showForm.style = "display:none";
@@ -69,24 +56,31 @@ form.addEventListener("submit", (e) => {
 
   console.log(socialRecord);
 
-//   socialRecord.map((social) => {
-//     tableName.innerHTML = social.nombre;
-//     (tableRut.innerHTML = social.rut),
-//       (tableComuna.innerHTML = social.comuna),
-//       (tableAddress.innerHTML = social.address),
-//       (tablePhone.innerHTML = social.phone),
-//       (tableEmail.innerHTML = social.email),
-//       (tableBirthday.innerHTML = social.birthday),
-//       (tableAge.innerHTML = social.age),
-//       (tableEstatura.innerHTML = social.estatura),
-//       (tableBasica.innerHTML = social.basica),
-//       (tableMedia.innerHTML = social.media),
-//       (tableJob.innerHTML = social.job),
-//       (tableAge.innerHTML = social.ageJob),
-//       (tableRenta.innerHTML = social.renta);
-//   });
+  const template = socialRecord.map((social) => {
+    return `
+   
+      <tr>
+        <td id="tableName">${social.nombre}</td>
+        <td id="tableRut">${social.rut}</td>
+        <td id="tableComuna">${social.comuna}</td>
+        <td id="tableAddress">${social.address}</td>
+        <td id="tablePhone">${social.phone}</td>
+        <td id="tableEmail">${social.email}</td>
+        <td id="tableBirthday">${social.birthday}</td>
+        <td id="tableAge">${social.age}</td>
+        <td id="tableEstatura">${social.estatura}</td>
+        <td id="tableBasica">${social.basica}</td>
+        <td id="tableMedia">${social.media}</td>
+        <td id="tableJob">${social.job}</td>
+        <td id="tableAgeJob">${social.ageJob}</td>
+        <td id="tableRenta">${social.renta}</td>
+      </tr>
+    `;
+  });
+
+  tableBody.innerHTML = template;
 
   showForm.style.display = "block";
-  form.style.display = "none"; 
-  
+  form.style.display = "none";
+  table.style.display = "block";
 });
