@@ -21,10 +21,8 @@
   display: block;
 }
 
-#formSimulator{
+#formSimulator, #table{
     display: none;
 }
 
-#showForm{
 
-}

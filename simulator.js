@@ -1,16 +1,37 @@
 const form = document.querySelector("#formSimulator");
+const table = document.querySelector("#table");
 let socialRecord = [];
 const showForm = document.querySelector("#showForm");
+const showTable = document.querySelector("#showTable");
+// const tableName = document.querySelector("#tableName");
+// const tableRut = document.querySelector("#tableRut");
+// const tableComuna = document.querySelector("#tableComuna");
+// const tableAddress = document.querySelector("#tableAddress");
+// const tablePhone = document.querySelector("#tablePhone");
+// const tableEmail = document.querySelector("#tableEmail");
+// const tableBirthday = document.querySelector("#tableBirthday");
+// const tableAge = document.querySelector("#tableAge");
+// const tableEstatura = document.querySelector("#tableEstatura");
+// const tableBasica = document.querySelector("#tableBasica");
+// const tableMedia = document.querySelector("#tableMedia");
+// const tableJob = document.querySelector("#tableJob");
+// const tableAgeJob = document.querySelector("#tableAgeJob");
+// const tableRenta = document.querySelector("#tableRenta");
 
 showForm.addEventListener("click", () => {
   showForm.style = "display:none";
   form.style = "display: block";
 });
 
+showTable.addEventListener("click", () => {
+  showTable.style = "display:none";
+  table.style = "display: block";
+});
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  user = document.getElementById("name").value.toLowerCase();
+  nombre = document.getElementById("name").value.toLowerCase();
   rut = document.getElementById("rut").value.toLowerCase();
   comuna = document.getElementById("comuna").value.toLowerCase();
   address = document.getElementById("address").value.toLowerCase();
@@ -25,10 +46,10 @@ form.addEventListener("submit", (e) => {
   ageJob = document.getElementById("ageJob").value.toLowerCase();
   renta = document.getElementById("renta").value.toLowerCase();
 
-  let table = {};
+  let user = {};
 
-  table = {
-    user,
+  user = {
+    nombre,
     rut,
     comuna,
     address,
@@ -44,7 +65,28 @@ form.addEventListener("submit", (e) => {
     renta,
   };
 
-  socialRecord = [...socialRecord, table];
-  console.log(socialRecord);
-});
+  socialRecord = [...socialRecord, user];
 
+  console.log(socialRecord);
+
+//   socialRecord.map((social) => {
+//     tableName.innerHTML = social.nombre;
+//     (tableRut.innerHTML = social.rut),
+//       (tableComuna.innerHTML = social.comuna),
+//       (tableAddress.innerHTML = social.address),
+//       (tablePhone.innerHTML = social.phone),
+//       (tableEmail.innerHTML = social.email),
+//       (tableBirthday.innerHTML = social.birthday),
+//       (tableAge.innerHTML = social.age),
+//       (tableEstatura.innerHTML = social.estatura),
+//       (tableBasica.innerHTML = social.basica),
+//       (tableMedia.innerHTML = social.media),
+//       (tableJob.innerHTML = social.job),
+//       (tableAge.innerHTML = social.ageJob),
+//       (tableRenta.innerHTML = social.renta);
+//   });
+
+  showForm.style.display = "block";
+  form.style.display = "none"; 
+  
+});

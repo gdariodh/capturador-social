@@ -20,11 +20,11 @@
       <div class="card-body">
         <h1 class="card-title">Ficha Social</h1>
 
-        <button class="btn btn-outline-primary" id="formSimulator">
+        <button id="showForm" class="btn btn-outline-primary" >
           Crear una ficha social
         </button>
 
-        <form id="form" method="post">
+        <form method="post" id="formSimulator">
           <div class="simulator-form">
             <div>
               <div class="form-group">
@@ -196,9 +196,10 @@
       </div>
     </div>
 
-    <table class="table">
+    <button class="btn btn-primary" id="showTable">Mostrar registros</button>
+
+    <table id="table" class="table">
       <thead>
-        <p>Registro Social</p>
         <tr>
           <th scope="col">Nombre</th>
           <th scope="col">RUT</th>
@@ -218,20 +219,20 @@
       </thead>
       <tbody>
         <tr>
-          <td id="tableName">Mark</td>
-          <td id="tableRut">Duarte</td>
-          <td id="tableComuna">Santiago</td>
-          <td id="tableAddress">av santa rosa 111</td>
-          <td id="tablePhone">9 33060422</td>
-          <td id="tableEmail">correo@correo.com</td>
-          <td id="tableBirthday">04-09-2002</td>
-          <td id="tableAge">19</td>
-          <td id="tableEstatura">171</td>
-          <td id="tableBasica">8</td>
-          <td id="tableMedia">4</td>
-          <td id="tableJob">Panadero</td>
-          <td id="tableAgeJob">2</td>
-          <td id="tableRenta">400000</td>
+          <td id="tableName"></td>
+          <td id="tableRut"></td>
+          <td id="tableComuna"></td>
+          <td id="tableAddress"></td>
+          <td id="tablePhone"></td>
+          <td id="tableEmail"></td>
+          <td id="tableBirthday"></td>
+          <td id="tableAge"></td>
+          <td id="tableEstatura"></td>
+          <td id="tableBasica"></td>
+          <td id="tableMedia"></td>
+          <td id="tableJob"></td>
+          <td id="tableAgeJob"></td>
+          <td id="tableRenta"></td>
         </tr>
       </tbody>
     </table>
