@@ -1,0 +1,47 @@
+﻿<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>HTML5 Canvas example</title>
+    <script>
+      function drawPicture(){
+
+        // Primero se recupera el objeto canvas a modificar
+        var canvas = document.getElementById('example');
+
+        // Luego se le indica la forma de trabajar 2D o 3D
+        var context = canvas.getContext('2d');
+        var c = 0;
+        var color1 =['0','100','80','50'];
+        var color2 =['40','40','240','90'];
+        var color3 =['0','0','0','30'];        
+        var xrgb="";
+        xrgb="rgb(40,40,240)";
+ 
+        // Se comienza a dibujar en el lienzo utilizando objetos
+        // gráficos
+            
+        for(y=0;y<4;y++){
+           c = c + 30; 
+           xrgb="rgb("+color1[y]+","+color2[y]+","+color3[y]+")";
+           context.fillStyle = xrgb;
+           context.fillRect (100+c, 250, 15, 50); // columna, fila, largo, ancho		
+           context.beginPath();       
+           context.fill();
+           
+        }
+        
+
+      }
+    </script>
+    <style type="text/css">
+      canvas { border: 2px solid black; } // borde cuadrante de trabajo definido
+    </style>
+  </head>
+  <body onload="drawPicture();">
+
+    <canvas id="example" width="360" height="360">
+    There is supposed to be an example drawing here, but it's not important.
+    </canvas>
+
+  </body>
+</html>

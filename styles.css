@@ -1,6 +1,30 @@
-.container--login{
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
+.container--login {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.simulator-card {
+  display: flex;
+  max-width: 800px;
+  margin: 3rem auto;
+  border-radius: 8px;
+}
+
+.simulator-form {
+  display: flex;
+  gap: 32px;
+}
+
+.simulator-btn {
+  display: block;
+}
+
+#formSimulator{
+    display: none;
+}
+
+#showForm{
+
 }
