@@ -4,6 +4,7 @@ const tableBody = document.querySelector("#tableBody");
 let socialRecord = [];
 const showForm = document.querySelector("#showForm");
 const showTable = document.querySelector("#showTable");
+const cleanTable = document.querySelector("#cleanTable");
 
 showForm.addEventListener("click", () => {
   showForm.style = "display:none";
@@ -16,6 +17,8 @@ showTable.addEventListener("click", () => {
 });
 
 form.addEventListener("submit", (e) => {
+  let errors = {};
+
   e.preventDefault();
 
   nombre = document.getElementById("name").value.toLowerCase();
@@ -25,6 +28,9 @@ form.addEventListener("submit", (e) => {
   phone = document.getElementById("phone").value.toLowerCase();
   email = document.getElementById("email").value.toLowerCase();
   birthday = document.getElementById("birthday").value.toLowerCase();
+
+  console.log(birthday);
+
   age = document.getElementById("age").value.toLowerCase();
   estatura = document.getElementById("estatura").value.toLowerCase();
   basica = document.getElementById("basica").value.toLowerCase();
@@ -32,6 +38,8 @@ form.addEventListener("submit", (e) => {
   job = document.getElementById("job").value.toLowerCase();
   ageJob = document.getElementById("ageJob").value.toLowerCase();
   renta = document.getElementById("renta").value.toLowerCase();
+  genero = document.getElementById("hombre").value;
+  genero = document.getElementById("mujer").value;
 
   let user = {};
 
@@ -50,6 +58,7 @@ form.addEventListener("submit", (e) => {
     job,
     ageJob,
     renta,
+    genero,
   };
 
   socialRecord = [...socialRecord, user];
@@ -83,4 +92,10 @@ form.addEventListener("submit", (e) => {
   showForm.style.display = "block";
   form.style.display = "none";
   table.style.display = "block";
+});
+
+cleanTable.addEventListener("click", () => {
+  console.log({ cleanded: socialRecord });
+
+  window.location.reload();
 });
