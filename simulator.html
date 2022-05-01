@@ -36,8 +36,6 @@
                   name="name"
                   placeholder="Ingresa un nombre"
                   required
-                  pattern="[A-Za-z]{5,50}"
-                  title="min 5 caracteres max 50 y solo letras"
                 />
               </div>
               <div class="form-group">
@@ -111,26 +109,13 @@
                   name="birthday"
                   placeholder="correo@correo.com"
                   required
+                  max="2022-05-01"
+                  min="1970-01-01"
                 />
               </div>
             </div>
 
             <div class="another-grid">
-              <div class="form-group">
-                <label for="age">Edad</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="age"
-                  name="age"
-                  placeholder="30"
-                  maxlength="2"
-                  required
-                  pattern="[0-9]{1,2}"
-                  title="solo numeros, min 1 max 2"
-                />
-              </div>
-
               <div class="form-group">
                 <label for="estatura">Estatura</label>
                 <input
@@ -212,32 +197,29 @@
                 />
               </div>
 
-              <input
-                class="form-control"
-                type="text"
-                placeholder="Edad"
-                readonly
-              />
+              <div>
+                <p>Cual es tu genero?</p>
 
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="hombre"
-                  id="hombre"
-                />
-                <label class="form-check-label" for="hombre"> Hombre </label>
-              </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="hombre"
+                    id="hombre"
+                  />
+                  <label class="form-check-label" for="hombre"> Hombre </label>
+                </div>
 
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="mujer"
-                  id="mujer"
-                />
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="mujer"
+                    id="mujer"
+                  />
 
-                <label class="form-check-label" for="mujer"> Mujer </label>
+                  <label class="form-check-label" for="mujer"> Mujer </label>
+                </div>
               </div>
             </div>
           </div>
@@ -249,6 +231,8 @@
 
     <div class="container">
       <button class="btn btn-primary" id="showTable">Mostrar registros</button>
+
+      <button class="btn btn-outline-dark"  style="display:none" id="hiddenTable">Esconder tabla</button>
 
       <button class="btn btn-outline-danger" id="cleanTable">
         Limpiar tabla
@@ -271,6 +255,7 @@
             <th scope="col">Trabajo</th>
             <th scope="col">Exp laboral</th>
             <th scope="col">Renta</th>
+            <th scope="col">Genero</th>
           </tr>
         </thead>
 
