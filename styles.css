@@ -21,8 +21,16 @@
   display: block;
 }
 
-#formSimulator, #table{
-    display: none;
+#formSimulator,
+#table {
+  display: none;
 }
 
+#carouselExampleControls {
+  max-width: 400px;
+  margin: 0 auto;
+}
 
+.imageCarousel {
+  height: 200px;
+}
