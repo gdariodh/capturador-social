@@ -103,6 +103,9 @@ form.addEventListener("submit", (e) => {
   showForm.style.display = "block";
   form.style.display = "none";
   table.style.display = "block";
+
+  // drawPicture()
+
 });
 
 showForm.addEventListener("click", () => {
@@ -164,3 +167,41 @@ function validateRut(rut) {
   // Uso de la función
   return Fn.validaRut(rut) ? true : false;
 }
+
+  // function drawPicture(){
+
+  //   console.log(socialRecord);
+
+  //   // Primero se recupera el objeto canvas a modificar
+  //   var canvas = document.getElementById('example');
+
+  //   // Luego se le indica la forma de trabajar 2D o 3D
+  //   var context = canvas.getContext('2d');
+  //   var c = 0;
+  //   var color1 =['0','100','80','50'];
+  //   var color2 =['40','40','240','90'];
+  //   var color3 =['0','0','0','30'];        
+  //   var xrgb="";
+  //   xrgb="rgb(40,40,240)";
+
+  //   // Se comienza a dibujar en el lienzo utilizando objetos
+  //   // gráficos
+
+    
+        
+  //   for(y=0;y<4;y++){
+  //     c = c + 30; 
+  //     xrgb="rgb("+color1[y]+","+color2[y]+","+color3[y]+")";
+  //     context.fillStyle = xrgb;
+  //     context.fillRect (100+c, 250, 15, 50); // columna, fila, ancho, largo		
+  //     context.beginPath();       
+  //     context.fill();
+      
+  //   }
+    
+
+  // }
+
+  // window.addEventListener("load", () => {
+  //   drawPicture()
+  // })
