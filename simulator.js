@@ -6,6 +6,16 @@ const showTable = document.querySelector("#showTable");
 const cleanTable = document.querySelector("#cleanTable");
 const hiddenTable = document.querySelector("#hiddenTable");
 let socialRecord = [];
+const cantidadMujeres = document.querySelector("#cantidadMujeres");
+const cantidadHombres = document.querySelector("#cantidadHombres");
+const promedioEdadMujer = document.querySelector("#promedioEdadMujer");
+const promedioEdadHombre = document.querySelector("#promedioEdadHombre");
+const promedioNoBasica = document.querySelector("#promedioNoBasica");
+const promedioNoMedia = document.querySelector("#promedioNoMedia");
+const rentaMasBaja = document.querySelector("#rentaMasBaja");
+const rentaMasAlta = document.querySelector("#rentaMasAlta");
+const promedioRenta = document.querySelector("#promedioRenta");
+const datosGenerales = document.querySelector("#datosGenerales");
 
 form.addEventListener("submit", (e) => {
   let errors = {};
@@ -98,14 +108,21 @@ form.addEventListener("submit", (e) => {
     `;
   });
 
+  cantidadMujeres.innerHTML = `cantidad de mujeres: ${
+    socialRecord.filter((social) => social.genero === "mujer").length
+  }`;
+  cantidadHombres.innerHTML = `cantidad de hombres: ${
+    socialRecord.filter((social) => social.genero === "hombre").length
+  }`;
+
   tableBody.innerHTML = template;
 
   showForm.style.display = "block";
+  datosGenerales.style.display = "block";
   form.style.display = "none";
   table.style.display = "block";
 
   // drawPicture()
-
 });
 
 showForm.addEventListener("click", () => {
@@ -117,12 +134,14 @@ showTable.addEventListener("click", () => {
   showTable.style = "display:none";
   table.style = "display: block";
   hiddenTable.style = "display: block";
+  datosGenerales.style.display = "block";
 });
 
 hiddenTable.addEventListener("click", () => {
   showTable.style = "display:block";
   table.style = "display: none";
   hiddenTable.style = "display: none";
+  datosGenerales.style.display = "none";
 });
 
 cleanTable.addEventListener("click", () => {
@@ -168,40 +187,37 @@ function validateRut(rut) {
   return Fn.validaRut(rut) ? true : false;
 }
 
-  // function drawPicture(){
+// function drawPicture(){
 
-  //   console.log(socialRecord);
+//   console.log(socialRecord);
 
-  //   // Primero se recupera el objeto canvas a modificar
-  //   var canvas = document.getElementById('example');
+//   // Primero se recupera el objeto canvas a modificar
+//   var canvas = document.getElementById('example');
 
-  //   // Luego se le indica la forma de trabajar 2D o 3D
-  //   var context = canvas.getContext('2d');
-  //   var c = 0;
-  //   var color1 =['0','100','80','50'];
-  //   var color2 =['40','40','240','90'];
-  //   var color3 =['0','0','0','30'];        
-  //   var xrgb="";
-  //   xrgb="rgb(40,40,240)";
+//   // Luego se le indica la forma de trabajar 2D o 3D
+//   var context = canvas.getContext('2d');
+//   var c = 0;
+//   var color1 =['0','100','80','50'];
+//   var color2 =['40','40','240','90'];
+//   var color3 =['0','0','0','30'];
+//   var xrgb="";
+//   xrgb="rgb(40,40,240)";
 
-  //   // Se comienza a dibujar en el lienzo utilizando objetos
-  //   // gráficos
+//   // Se comienza a dibujar en el lienzo utilizando objetos
+//   // gráficos
 
-    
-        
-  //   for(y=0;y<4;y++){
-  //     c = c + 30; 
-  //     xrgb="rgb("+color1[y]+","+color2[y]+","+color3[y]+")";
-  //     context.fillStyle = xrgb;
-  //     context.fillRect (100+c, 250, 15, 50); // columna, fila, ancho, largo		
-  //     context.beginPath();       
-  //     context.fill();
-      
-  //   }
-    
+//   for(y=0;y<4;y++){
+//     c = c + 30;
+//     xrgb="rgb("+color1[y]+","+color2[y]+","+color3[y]+")";
+//     context.fillStyle = xrgb;
+//     context.fillRect (100+c, 250, 15, 50); // columna, fila, ancho, largo
+//     context.beginPath();
+//     context.fill();
 
-  // }
+//   }
 
-  // window.addEventListener("load", () => {
-  //   drawPicture()
-  // })
+// }
+
+// window.addEventListener("load", () => {
+//   drawPicture()
+// })
